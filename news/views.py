@@ -1,5 +1,9 @@
 from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Добро пожаловать в приложение News!")
 
+def main(request):
+    return HttpResponse('Hello, world!')  # Вернёт страницу с надписью "Hello world!"
+
+
+def info(request):
+    return HttpResponse('information page')
