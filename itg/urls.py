@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from news import views  # Импортируем представление
+
+from news import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Маршрут для панели администратора
-    path('', views.index, name='index'),  # Маршрут для главной страницы
+    path('admin/', admin.site.urls),
+    path('', views.main),
+    path('info/', views.info),
 ]
